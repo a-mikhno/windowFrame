@@ -87,14 +87,11 @@ const App = () => {
 
   return (
     <div className={classes.wrapper}>
-      <div>
-        <div>count: 4</div>
-        <div className={classes.drawingArea}>
-          <svg ref={ref} width={WIDTH} height={HEIGHT} viewBox={`0 0 ${WIDTH} ${HEIGHT}`} xmlns="http://www.w3.org/2000/svg">
-            {points.map((point) => <Point key={point.id} point={point} /> )}
-            {GetLinesArray(points).map(i => i)}
-          </svg>
-        </div>
+      <div className={classes.drawingArea}>
+        <svg ref={ref} width={WIDTH} height={HEIGHT} viewBox={`0 0 ${WIDTH} ${HEIGHT}`} xmlns="http://www.w3.org/2000/svg">
+          {points.map((point) => <Point key={point.id} point={point} /> )}
+          {GetLinesArray(points).map(i => i)}
+        </svg>
       </div>
     </div>
   );
